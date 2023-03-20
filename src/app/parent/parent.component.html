@@ -1,0 +1,9 @@
+<h1>Parent component</h1>
+<button (click)="toggleChild()">Toggle</button>
+<input type="text" [(ngModel)]="Channel">
+<p>{{Channel}}</p>
+<h1>{{data}}</h1>
+<h3 #parent>hai</h3>
+<app-child *ngIf="isChild" [Channel]="Channel" (parentFunction)="parentFunction($event)">
+     <h1 #projectedContent>This is parent html file inside the child selector </h1>
+</app-child>
